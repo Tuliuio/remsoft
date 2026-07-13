@@ -1,0 +1,11 @@
+:HL["/_next/static/chunks/1cychi8twu63y.css","style"]
+:HL["/_next/static/media/7ddd198311ba7843-s.p.3kq6k02b2ysv1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/83459a130389a713-s.p.1wh85i6079oxo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/logo/remsoft-mark.webp","image"]
+:HL["/logo/remsoft-wordmark-white.webp","image"]
+:HL["https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80","image"]
+:HL["https://randomuser.me/api/portraits/men/52.jpg","image"]
+:HL["https://randomuser.me/api/portraits/women/48.jpg","image"]
+:HL["https://randomuser.me/api/portraits/men/76.jpg","image"]
+:HL["https://randomuser.me/api/portraits/women/90.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"quem-somos","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"mPrRiMxDc1pgh3XnsnEC7"}
