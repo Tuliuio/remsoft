@@ -7,8 +7,10 @@ export default function Services() {
     <section id="servicos" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-2xl text-center">
         <p className="label-eyebrow text-[13px] text-primary">Serviços</p>
-        <h2 className="mt-3 font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight tracking-tight text-ink">
-          Soluções sob medida, do início ao fim
+        <h2 className="mt-3 font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight tracking-tight text-primary-dark">
+          Soluções sob medida,
+          <br />
+          do início ao fim.
         </h2>
         <p className="mt-4 text-[17px] text-body">
           Do primeiro diagrama ao deploy — cobrimos toda a jornada digital do seu

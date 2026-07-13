@@ -33,8 +33,8 @@ export default function Header() {
           : "bg-white/60 backdrop-blur-sm border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="shrink-0" aria-label="Rem Soft — início">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-[21px] md:px-8">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="Rem Soft — início">
           <Logo />
         </Link>
 

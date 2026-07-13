@@ -4,17 +4,17 @@ const features = [
   {
     icon: IconStrategy,
     title: "Squads Ágeis",
-    desc: "Times multidisciplinares — PO, Scrum Master e devs — dedicados e organizados para entregar qualidade e eficiência sempre.",
+    desc: "Times multidisciplinares — com PO, Scrum Master e desenvolvedores — dedicados e organizados para entregar qualidade e eficiência em todo ciclo.",
   },
   {
     icon: IconDesign,
     title: "Software sob Demanda",
-    desc: "Sistemas web, aplicativos e integrações desenhados sob medida para o seu negócio, com tecnologia de ponta.",
+    desc: "Sistemas web, aplicativos e integrações desenhados sob medida para o seu negócio, sempre com tecnologia de ponta e foco em resultado real.",
   },
   {
     icon: IconCode,
     title: "Entrega Dev-Ready",
-    desc: "Dividimos o projeto em ciclos curtos para entregar com mais qualidade e uma rotina previsível de resultados.",
+    desc: "Dividimos o projeto em ciclos curtos e previsíveis, entregando com mais qualidade e uma rotina constante de resultados para o seu time.",
   },
 ];
 
@@ -25,10 +25,10 @@ export default function Features() {
         <p className="label-eyebrow text-[13px] text-primary">
           Nosso jeito de trabalhar
         </p>
-        <h2 className="mt-3 font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight tracking-tight text-ink">
-          Por que escolher a Rem Soft
+        <h2 className="mt-3 font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold leading-tight tracking-tight text-primary-dark">
+          Por que escolher a Rem Soft?
         </h2>
-        <p className="mt-4 text-[17px] text-body">
+        <p className="mt-4 text-balance text-[17px] text-body">
           Organizamos nosso time para entregar soluções que escalam junto com os
           objetivos do seu negócio.
         </p>

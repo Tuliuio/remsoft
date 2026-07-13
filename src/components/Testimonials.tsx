@@ -28,8 +28,8 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-      <h2 className="text-center font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold tracking-tight text-ink">
-        O que dizem nossos clientes
+      <h2 className="text-center font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold tracking-tight text-primary-dark">
+        O que dizem nossos clientes:
       </h2>
 
       <div className="mt-14 grid gap-6 md:grid-cols-3">

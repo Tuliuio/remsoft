@@ -13,10 +13,10 @@ export default function About() {
     <section id="quem-somos" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
       <div className="max-w-2xl">
         <p className="label-eyebrow text-[13px] text-primary">Quem Somos</p>
-        <h2 className="mt-3 font-sans text-[clamp(2rem,4.5vw,3.2rem)] font-bold leading-[1.08] tracking-tight text-ink">
-          Onde a estratégia encontra
+        <h2 className="mt-3 font-sans text-[clamp(2rem,4.5vw,3.2rem)] font-bold leading-[1.08] tracking-tight text-primary-dark">
+          Onde a estratégia
           <br />
-          <span className="text-muted">a tecnologia.</span>
+          <span className="text-muted">encontra a tecnologia.</span>
         </h2>
       </div>
 

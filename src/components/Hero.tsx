@@ -38,7 +38,7 @@ export default function Hero() {
             Além da solução
           </span>
 
-          <h1 className="mt-6 font-sans text-[clamp(2.6rem,6vw,4.3rem)] font-extrabold leading-[1.02] tracking-tight text-ink">
+          <h1 className="mt-6 font-sans text-[clamp(2.6rem,6vw,4.3rem)] font-extrabold leading-[1.02] tracking-tight text-primary-dark">
             Somos especialistas
             <br />
             em software.
@@ -48,8 +48,11 @@ export default function Hero() {
 
           <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-body">
             Damos total suporte aos nossos parceiros para gerar valor no âmbito
-            digital — da estratégia ao desenvolvimento. Uma software house 100%
-            remota, há mais de 12 anos impulsionando resultados.
+            digital
+            <br className="hidden md:block" />— da estratégia ao desenvolvimento.
+            Uma software house 100% remota,
+            <br className="hidden md:block" /> há mais de 12 anos impulsionando
+            resultados.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-4">

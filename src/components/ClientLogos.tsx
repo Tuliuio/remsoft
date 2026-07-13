@@ -46,15 +46,18 @@ export default function ClientLogos() {
           Empresas que confiam na Rem Soft
         </p>
 
-        <div className="mt-10 grid grid-cols-2 items-center gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        <div className="mt-10 grid grid-cols-2 items-center gap-x-10 gap-y-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
           {logos.map((logo) => (
-            <div key={logo.file} className="flex items-center justify-center">
+            <div
+              key={logo.file}
+              className="flex h-14 items-center justify-center"
+            >
               <img
                 src={`/clientes/${logo.file}`}
                 alt={logo.alt}
                 title={logo.alt}
                 loading="lazy"
-                className="max-h-12 w-auto max-w-[150px] object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                className="max-h-14 w-auto max-w-[150px] object-contain opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
               />
             </div>
           ))}
