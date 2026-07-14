@@ -38,7 +38,7 @@ export default function Hero() {
             Além da solução
           </span>
 
-          <h1 className="mt-6 font-sans text-[clamp(2.6rem,6vw,4.3rem)] font-extrabold leading-[1.02] tracking-tight text-primary-dark">
+          <h1 className="mt-6 font-sans text-[clamp(2.3rem,5.2vw,3.75rem)] font-extrabold leading-[1.02] tracking-tight text-primary-dark">
             Somos especialistas
             <br />
             em software.
