@@ -12,6 +12,8 @@ const avatars = [
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
+      {/* engineering dot-grid backdrop */}
+      <div aria-hidden className="dot-grid pointer-events-none absolute inset-0" />
       {/* soft brand glow backdrop */}
       <div
         aria-hidden
@@ -58,14 +60,14 @@ export default function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               href="/contato"
-              className="group inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-primary px-7 py-4 text-[16px] font-semibold text-white shadow-[0_14px_30px_-10px_rgba(3,93,187,0.7)] transition-all hover:bg-primary-dark"
+              className="group inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-primary px-7 py-4 text-[16px] font-semibold text-white shadow-[0_14px_30px_-10px_rgba(3,93,187,0.7)] transition-all duration-200 hover:bg-primary-dark hover:shadow-[0_18px_36px_-10px_rgba(3,93,187,0.8)] active:scale-[0.97]"
             >
               Fale com um especialista
               <ArrowRight className="transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/servicos"
-              className="inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-line bg-white px-7 py-4 text-[16px] font-semibold text-ink transition-colors hover:border-primary/40 hover:text-primary"
+              className="inline-flex items-center gap-2 rounded-[var(--radius-pill)] border border-line bg-white px-7 py-4 text-[16px] font-semibold text-ink transition-all duration-200 hover:border-primary/40 hover:text-primary active:scale-[0.97]"
             >
               Nossos serviços
             </Link>

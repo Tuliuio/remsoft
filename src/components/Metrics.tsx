@@ -41,7 +41,7 @@ function Metric({
   const n = useCountUp(value, active);
   return (
     <div className="text-center">
-      <div className="font-sans text-[clamp(2.4rem,5vw,3.4rem)] font-extrabold leading-none text-white">
+      <div className="font-sans text-[clamp(2.4rem,5vw,3.4rem)] font-extrabold leading-none tabular-nums text-white">
         {n}
         <span className="text-cyan">{suffix}</span>
       </div>

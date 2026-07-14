@@ -1,4 +1,5 @@
 import { IconStrategy, IconDesign, IconCode } from "./icons";
+import Reveal from "./Reveal";
 
 const features = [
   {
@@ -21,7 +22,7 @@ const features = [
 export default function Features() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
-      <div className="mx-auto max-w-2xl text-center">
+      <Reveal className="mx-auto max-w-2xl text-center">
         <p className="label-eyebrow text-[13px] text-primary">
           Nosso jeito de trabalhar
         </p>
@@ -32,19 +33,19 @@ export default function Features() {
           Organizamos nosso time para entregar soluções que escalam junto com os
           objetivos do seu negócio.
         </p>
-      </div>
+      </Reveal>
 
-      <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+      <Reveal stagger className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
         {features.map(({ icon: Icon, title, desc }) => (
-          <div key={title} className="text-center md:text-left">
-            <span className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-primary shadow-[var(--shadow-card)] md:mx-0">
+          <div key={title} className="group text-center md:text-left">
+            <span className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-primary shadow-[var(--shadow-card)] transition-transform duration-300 [transition-timing-function:var(--ease-spring)] group-hover:-translate-y-1 group-hover:scale-105 md:mx-0">
               <Icon />
             </span>
             <h3 className="text-[20px] font-bold text-ink">{title}</h3>
             <p className="mt-2 text-[15px] leading-relaxed text-body">{desc}</p>
           </div>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }

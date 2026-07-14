@@ -46,6 +46,14 @@
   --shadow-card: 0 1px 2px rgba(15, 30, 46, 0.04),
     0 12px 32px -12px rgba(15, 30, 46, 0.12);
   --shadow-float: 0 12px 40px -8px rgba(15, 30, 46, 0.18);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -53,6 +61,24 @@ body {
   color: var(--color-body);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Brand text selection */
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Visible, on-brand focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Anchored sections clear the sticky header */
+section[id] {
+  scroll-margin-top: 96px;
 }
 
 /* Utilities ---------------------------------------------------------- */
@@ -91,3 +117,81 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up { animation: fade-up 0.6s ease-out both; }
+
+/* Reveal on scroll -----------------------------------------------------
+   Hidden state only applies when JS is present (html.js), so content
+   stays fully visible without JavaScript. `is-visible` is added by the
+   <Reveal> component via IntersectionObserver. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s var(--ease-out),
+    transform 0.7s var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children: apply .reveal-stagger to a grid/list wrapper */
+.js .reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s var(--ease-out),
+    transform 0.6s var(--ease-out);
+}
+.js .reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+.js .reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 70ms; }
+.js .reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 140ms; }
+.js .reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 210ms; }
+.js .reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 280ms; }
+.js .reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 350ms; }
+.js .reveal-stagger.is-visible > *:nth-child(7) { transition-delay: 420ms; }
+.js .reveal-stagger.is-visible > *:nth-child(8) { transition-delay: 490ms; }
+
+/* Logo marquee ---------------------------------------------------------- */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Subtle engineering dot-grid backdrop (hero) --------------------------- */
+.dot-grid {
+  background-image: radial-gradient(rgba(3, 93, 187, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 35%, #000 30%, transparent 75%);
+}
+
+/* Reduced motion: show everything, stop non-essential animation --------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal,
+  .js .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .marquee-track { animation: none; }
+  .animate-float-slow,
+  .animate-float-slower,
+  .animate-fade-up { animation: none; }
+}

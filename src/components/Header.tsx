@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo, ArrowRight, ChevronDown } from "./icons";
 import { services } from "@/lib/services";
 
@@ -17,6 +18,9 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -49,11 +53,16 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="group inline-flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-medium text-ink/80 transition-colors hover:text-primary"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`group inline-flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-medium transition-colors hover:text-primary ${
+                    isActive(item.href)
+                      ? "font-semibold text-primary"
+                      : "text-ink/80"
+                  }`}
                 >
                   {item.label}
                   <ChevronDown
-                    className={`opacity-60 transition-transform ${
+                    className={`opacity-60 transition-transform duration-200 ${
                       megaOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -61,10 +70,10 @@ export default function Header() {
 
                 {/* Mega-menu */}
                 <div
-                  className={`absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-3 transition-all ${
+                  className={`absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-3 transition-all duration-200 [transition-timing-function:var(--ease-out)] ${
                     megaOpen
-                      ? "pointer-events-auto opacity-100 translate-y-0"
-                      : "pointer-events-none opacity-0 translate-y-1"
+                      ? "pointer-events-auto opacity-100 translate-y-0 scale-100"
+                      : "pointer-events-none opacity-0 translate-y-1.5 scale-[0.98]"
                   }`}
                 >
                   <div className="grid grid-cols-2 gap-1 rounded-3xl border border-line bg-white p-3 shadow-[var(--shadow-float)]">
@@ -94,7 +103,12 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-[15px] font-medium text-ink/80 transition-colors hover:text-primary"
+                aria-current={isActive(item.href) ? "page" : undefined}
+                className={`rounded-full px-4 py-2 text-[15px] font-medium transition-colors hover:text-primary ${
+                  isActive(item.href)
+                    ? "font-semibold text-primary"
+                    : "text-ink/80"
+                }`}
               >
                 {item.label}
               </Link>
@@ -105,7 +119,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/contato"
-            className="group inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-primary px-6 py-3 text-[15px] font-semibold text-white shadow-[0_10px_24px_-10px_rgba(3,93,187,0.7)] transition-all hover:bg-primary-dark hover:shadow-[0_14px_28px_-8px_rgba(3,93,187,0.8)]"
+            className="group inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-primary px-6 py-3 text-[15px] font-semibold text-white shadow-[0_10px_24px_-10px_rgba(3,93,187,0.7)] transition-all duration-200 hover:bg-primary-dark hover:shadow-[0_14px_28px_-8px_rgba(3,93,187,0.8)] active:scale-[0.97]"
           >
             Fale com um especialista
             <ArrowRight className="transition-transform group-hover:translate-x-0.5" />

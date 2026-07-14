@@ -54,7 +54,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-[var(--radius-pill)] brand-gradient px-6 py-3 text-[15px] font-semibold text-white"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-[var(--radius-pill)] brand-gradient px-6 py-3 text-[15px] font-semibold text-white transition-all duration-200 hover:brightness-110 active:scale-[0.97]"
             >
               Assinar
               <ArrowRight className="h-4 w-4" />
@@ -92,7 +92,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3">
             {nav.map((n) => (
               <li key={n.label}>
-                <a href={n.href} className="text-[15px] hover:text-white">
+                <a href={n.href} className="text-[15px] transition-colors duration-200 hover:text-white">
                   {n.label}
                 </a>
               </li>
@@ -105,7 +105,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-3">
             {footerServices.map((s) => (
               <li key={s.label}>
-                <a href={s.href} className="text-[15px] hover:text-white">
+                <a href={s.href} className="text-[15px] transition-colors duration-200 hover:text-white">
                   {s.label}
                 </a>
               </li>
@@ -118,13 +118,13 @@ export default function Footer() {
           <ul className="mt-4 space-y-4">
             <li className="flex items-center gap-3">
               <IconMail className="shrink-0 text-cyan" />
-              <a href="mailto:contato@remsoft.com.br" className="text-[15px] hover:text-white">
+              <a href="mailto:contato@remsoft.com.br" className="text-[15px] transition-colors duration-200 hover:text-white">
                 contato@remsoft.com.br
               </a>
             </li>
             <li className="flex items-center gap-3">
               <IconPhone className="shrink-0 text-cyan" />
-              <a href="tel:+554840422634" className="text-[15px] hover:text-white">
+              <a href="tel:+554840422634" className="text-[15px] transition-colors duration-200 hover:text-white">
                 +55 (48) 4042-2634
               </a>
             </li>

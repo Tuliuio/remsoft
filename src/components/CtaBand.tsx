@@ -30,7 +30,7 @@ export default function CtaBand({
           </p>
           <Link
             href="/contato"
-            className="group mt-8 inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-white px-8 py-4 text-[16px] font-bold text-primary transition-transform hover:scale-[1.02]"
+            className="group mt-8 inline-flex items-center gap-2 rounded-[var(--radius-pill)] bg-white px-8 py-4 text-[16px] font-bold text-primary transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
           >
             Fale com um especialista
             <ArrowRight className="transition-transform group-hover:translate-x-1" />

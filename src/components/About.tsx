@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { ArrowRight, Check } from "./icons";
+import Reveal from "./Reveal";
 
 const pillars = [
   "Confiança, comprometimento e evolução contínua",
@@ -11,16 +12,16 @@ const pillars = [
 export default function About() {
   return (
     <section id="quem-somos" className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-      <div className="max-w-2xl">
+      <Reveal className="max-w-2xl">
         <p className="label-eyebrow text-[13px] text-primary">Quem Somos</p>
         <h2 className="mt-3 font-sans text-[clamp(2rem,4.5vw,3.2rem)] font-bold leading-[1.08] tracking-tight text-primary-dark">
           Onde a estratégia
           <br />
           <span className="text-muted">encontra a tecnologia.</span>
         </h2>
-      </div>
+      </Reveal>
 
-      <div className="mt-12 grid items-center gap-10 lg:grid-cols-[340px_1fr]">
+      <Reveal delay={100} className="mt-12 grid items-center gap-10 lg:grid-cols-[340px_1fr]">
         {/* CEO photo */}
         <div className="flex flex-col items-center gap-4">
           <div className="overflow-hidden rounded-[28px] shadow-[var(--shadow-card)]">
@@ -86,7 +87,7 @@ export default function About() {
             <ArrowRight className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

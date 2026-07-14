@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Star } from "./icons";
+import Reveal from "./Reveal";
 
 const testimonials = [
   {
@@ -28,15 +29,17 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-      <h2 className="text-center font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold tracking-tight text-primary-dark">
-        O que dizem nossos clientes:
-      </h2>
+      <Reveal>
+        <h2 className="text-center font-sans text-[clamp(1.9rem,4vw,2.8rem)] font-bold tracking-tight text-primary-dark">
+          O que dizem nossos clientes:
+        </h2>
+      </Reveal>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
+      <Reveal stagger className="mt-14 grid gap-6 md:grid-cols-3">
         {testimonials.map((t) => (
           <figure
             key={t.name}
-            className="flex flex-col rounded-3xl border border-line bg-white p-7 shadow-[0_1px_2px_rgba(15,30,46,0.03)]"
+            className="flex flex-col rounded-3xl border border-line bg-white p-7 shadow-[0_1px_2px_rgba(15,30,46,0.03)] transition-all duration-300 [transition-timing-function:var(--ease-out)] hover:-translate-y-1 hover:shadow-[var(--shadow-card)]"
           >
             <div className="flex gap-1 text-star">
               {Array.from({ length: 5 }).map((_, i) => (
@@ -61,7 +64,7 @@ export default function Testimonials() {
             </figcaption>
           </figure>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 }

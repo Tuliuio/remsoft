@@ -23,14 +23,14 @@ export default function FAQ({
             <div key={item.q}>
               <button
                 onClick={() => setOpen(isOpen ? null : i)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
+                className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left transition-colors duration-200 hover:bg-soft/60"
                 aria-expanded={isOpen}
               >
                 <span className="text-[16px] font-semibold text-ink">
                   {item.q}
                 </span>
                 <span
-                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-primary transition-transform ${
+                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-line text-primary transition-transform duration-300 [transition-timing-function:var(--ease-spring)] ${
                     isOpen ? "rotate-45" : ""
                   }`}
                 >

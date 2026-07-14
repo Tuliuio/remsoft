@@ -87,7 +87,7 @@ export default function Contact() {
             </label>
             <button
               type="submit"
-              className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-pill)] bg-white px-7 py-4 text-[16px] font-bold text-primary transition-transform hover:scale-[1.01]"
+              className="group mt-6 inline-flex w-full items-center justify-center gap-2 rounded-[var(--radius-pill)] bg-white px-7 py-4 text-[16px] font-bold text-primary transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
             >
               Fale com um especialista
               <ArrowRight className="transition-transform group-hover:translate-x-1" />
