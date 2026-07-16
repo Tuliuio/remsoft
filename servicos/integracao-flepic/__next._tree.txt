@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/1j75youvfd6b6.css","style"]
+:HL["/_next/static/chunks/0nlmansd9k-q-.css","style"]
 :HL["/_next/static/media/7ddd198311ba7843-s.p.3kq6k02b2ysv1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/83459a130389a713-s.p.1wh85i6079oxo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/logo/remsoft-mark.webp","image"]
@@ -6,4 +6,4 @@
 :HL["https://randomuser.me/api/portraits/men/45.jpg","image"]
 :HL["https://randomuser.me/api/portraits/women/65.jpg","image"]
 :HL["https://randomuser.me/api/portraits/women/32.jpg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"servicos","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"integracao-flepic","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"xZLKRQLXN_dqyB2RfxxOc"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"servicos","param":null,"prefetchHints":0,"slots":{"children":{"name":"slug","param":{"type":"d","key":"integracao-flepic","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"NWJ2W_SKwHzLBTEcxsXwO"}
