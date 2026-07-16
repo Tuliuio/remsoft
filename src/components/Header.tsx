@@ -3,12 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Logo, ArrowRight, ChevronDown } from "./icons";
+import { Logo, ArrowRight, ChevronDown, IconBlueprint } from "./icons";
 import { services } from "@/lib/services";
 
 const nav = [
   { label: "Quem Somos", href: "/quem-somos" },
   { label: "Serviços", href: "/servicos", mega: true },
+  { label: "Design Sprint", href: "/design-sprint" },
   { label: "Cases", href: "/cases" },
   { label: "Blog", href: "/blog" },
   { label: "Contato", href: "/contato" },
@@ -76,7 +77,30 @@ export default function Header() {
                       : "pointer-events-none opacity-0 translate-y-1.5 scale-[0.98]"
                   }`}
                 >
-                  <div className="grid grid-cols-2 gap-1 rounded-3xl border border-line bg-white p-3 shadow-[var(--shadow-float)]">
+                  <div className="rounded-3xl border border-line bg-white p-3 shadow-[var(--shadow-float)]">
+                    <Link
+                      href="/design-sprint"
+                      className="group mb-2 flex items-center gap-3 rounded-2xl border border-primary/15 bg-primary-soft/70 p-3 transition-colors hover:bg-primary-soft"
+                    >
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl brand-gradient text-white">
+                        <IconBlueprint className="h-[18px] w-[18px]" />
+                      </span>
+                      <span className="flex-1 leading-tight">
+                        <span className="flex items-center gap-2">
+                          <span className="text-[14px] font-semibold text-ink">
+                            Design Sprint
+                          </span>
+                          <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+                            Etapa 1
+                          </span>
+                        </span>
+                        <span className="mt-0.5 block text-[12px] text-subtle">
+                          A porta de entrada do seu sistema — comece por aqui.
+                        </span>
+                      </span>
+                      <ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                    <div className="grid grid-cols-2 gap-1">
                     {services.map((s) => (
                       <Link
                         key={s.slug}
@@ -96,6 +120,7 @@ export default function Header() {
                         </span>
                       </Link>
                     ))}
+                    </div>
                   </div>
                 </div>
               </div>

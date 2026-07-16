@@ -18,6 +18,7 @@ const nav = [
 ];
 
 const footerServices = [
+  { label: "Design Sprint", href: "/design-sprint" },
   { label: "Integração de Sistemas", href: "/servicos/integracao-flepic" },
   { label: "Sistemas Web & Apps", href: "/servicos/sistemas-web-apps" },
   { label: "Websites", href: "/servicos/websites" },
